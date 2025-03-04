@@ -1,7 +1,7 @@
 name: GitHub Actions infinite_matrix
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 
 jobs:
