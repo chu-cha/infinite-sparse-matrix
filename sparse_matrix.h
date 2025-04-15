@@ -27,10 +27,10 @@ public:
 
             T operator=(const T& value) {
                 matrix.set(row, col, value);
-                return value;  // Возвращаем значение, а не прокси
+                return value;  // Г‚Г®Г§ГўГ°Г Г№Г ГҐГ¬ Г§Г­Г Г·ГҐГ­ГЁГҐ, Г  Г­ГҐ ГЇГ°Г®ГЄГ±ГЁ
             }
 
-            // Неявное приведение к T (для auto val = m[1][1] не работает!!)
+            // cast to T while assigning (this doesn't work with auto val = m[1][1] !!)
             operator T() const {
                 return matrix.get(row, col);
             }
@@ -49,7 +49,7 @@ public:
         return data.size();
     }
 
-    // Итератор, возвращающий (x, y, value)
+    // Iterator returns tuple (x, y, value)
     class Iterator {
         using IterType = typename ContainerType::const_iterator;
         IterType it_;
