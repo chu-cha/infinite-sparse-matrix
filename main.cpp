@@ -18,7 +18,7 @@ int main() {
     }
 
     std::cout << "\nAll elements: \n";
-    for (auto& c : matrix)
+    for (auto&& c : matrix)
     {
         int x;
         int y;
